@@ -1,0 +1,28 @@
+{
+  "name": "classwork9_machinelearning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "dependencies": {
+    "bayes": "^1.0.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "socket.io": "^4.0.1",
+    "stopword": "^1.0.7",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanka-t/hw9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanka-t/hw9/issues"
+  },
+  "homepage": "https://github.com/vanka-t/hw9#readme"
+}

@@ -1,8 +1,8 @@
-const nodeExternals = require("webpack-node-externals");
+// const nodeExternals = require("webpack-node-externals");
 
-module.exports = {
-  externals: [nodeExternals()]
-};
+// module.exports = {
+//   externals: [nodeExternals()]
+// };
 
 module.exports = {
     consumer_key:        'pRObMgl0Y5g8yO2u4qBHLJbCT',
