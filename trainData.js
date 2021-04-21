@@ -10,12 +10,53 @@ var bayes = require("bayes");
 var classifier = bayes();
 
 var trends = {
-    "McGregor": "sports",
-    "Matsuyama": "sports",
-    "Scott Laughton": "sports",
+    "homemade": "food",
+    "cook": "food",
+    "frozen": "food",
+    "healthy": "food",
+    "fasting": "food",
+    "keto": "food",
+    "recipe": "food",
+    "calories": "food",
+    "vegan": "food",
+    "vegetarian": "food",
+
+    "sequel": "movie",
+    "film": "movie",
+    "actress": "movie",
+    "emma stone": "movie",
+    "hollywood": "movie",
+    "netflix": "movie",
+    "hbo": "movie",
+    "hulu": "movie",
+    "tv show": "movie",
+    "oscars": "movie",
+
     "BTS": "music",
     "Brandon Urie": "music",
-    "iHeartAwards": "music"
+    "Grammys": "music",
+    "hit": "music",
+    "iHeartAwards": "music",
+
+    "plant": "nature",
+    "garden": "nature",
+    "sky": "nature",
+    "sea": "nature",
+    "ocean": "nature",
+    "forest": "nature",
+
+    "president": "politics",
+    "debt": "politics",
+    "trump": "politics",
+    "voting": "politics",
+    "george floyd": "politics",
+
+    "dog": "animals",
+    "pet": "animals",
+   // "pet": "animals",
+    "cat": "animals"
+
+
 
 }
 
@@ -28,11 +69,11 @@ T.get('search/tweets', {q: key, count:100}, async function(error,data,response){
             
            // console.log(temp_text);
             var cleaned_up_words = cleanup(temp_tweet);
-            //var final_words = cleaned_up_words.join(", ");
+           // var final_words = cleaned_up_words.join(", ");
             await classifier.learn(cleaned_up_words, value);//value);
         }
         index++;
-        if(index ==6){//number of values u have on the object (eg.bts, mcgregor, etc)
+        if(index ==38){//number of values u have on the object (eg.bts, mcgregor, etc)
             
             var try_it = "he won the game";
             try_it.split(" ").join(", ");

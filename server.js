@@ -6,10 +6,11 @@ const fs = require("fs");
 const express = require("express");
 var app = express();
 
-var server = app.listen(300);
+var server = app.listen(3000);
 
 app.use(express.static("public"));
 var awesomeClassifier;
+const alphanumeric = /^[0-9a-zA-Z]+$/;
 
 fs.readFile("./classifier.json", downloadedFile);
 function downloadedFile(error,data){
@@ -24,7 +25,7 @@ function downloadedFile(error,data){
  }
 
 var socket = require("socket.io");
-var io= socket(server);
+var io = socket(server);
 
 
 
@@ -41,6 +42,7 @@ function newConnection(socket){
        socket.emit("guess",category);
     }                                                                                                                                                                                                                                                                                                                                                                                                                                       
 }
+
 
 function cleanup(tweet){
     //splits up tweet into individ words

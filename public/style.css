@@ -1,8 +1,24 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  border: 20px;
+  padding: 20px;
+  
+  background-color: #5390d9;
+}
+
+button {
+  background-color: #4CAF50;
+  @font-face {
+    font-family: myFirstFont;
+    src: assets/font1.ttf;
+  }
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+
 }
 
 canvas {
+
   display: block;
+  margin: 20px;
 }
