@@ -20,8 +20,12 @@ var trends = {
     "calories": "food",
     "vegan": "food",
     "vegetarian": "food",
+    "yummy": "food",
+    "sweet": "food",
+    "sour": "food",
 
     "sequel": "movie",
+    "watched": "movie",
     "film": "movie",
     "actress": "movie",
     "emma stone": "movie",
@@ -30,13 +34,34 @@ var trends = {
     "hbo": "movie",
     "hulu": "movie",
     "tv show": "movie",
+    "shrek": "movie",
+    "rupaul": "movie",
     "oscars": "movie",
+    "plot twist": "movie",
+    "camera": "movie",
+    "acting": "movie",
+    "director": "movie",
+    "golden globe": "movie",
+    "blockbuster": "movie",
+    "award winning": "movie",
 
     "BTS": "music",
     "Brandon Urie": "music",
     "Grammys": "music",
     "hit": "music",
     "iHeartAwards": "music",
+    "band": "music",
+    "song": "music",
+    "pop": "music",
+    "lyrics": "music",
+    "guitar": "music",
+    "piano": "music",
+    "vocals": "music",
+    "listened": "music",
+    "microphone": "music",
+    "singing": "music",
+    "performance": "music",
+    "performing": "music",
 
     "plant": "nature",
     "garden": "nature",
@@ -44,20 +69,46 @@ var trends = {
     "sea": "nature",
     "ocean": "nature",
     "forest": "nature",
+    "sun": "nature",
+    "sunny": "nature",
+    "rain": "nature",
+    "outside": "nature",
+    "leaves": "nature",
+    "leaf": "nature",
+    "flower": "nature",
+    "tree": "nature",
 
     "president": "politics",
     "debt": "politics",
     "trump": "politics",
     "voting": "politics",
     "george floyd": "politics",
+    "bernie": "politics",
+    "capitalism": "politics",
+    "news": "politics",
+    "socialism": "politics",
+    "corrupt": "politics",
+    "vaccine": "politics",
+    "stock market": "politics",
+    "war": "politics",
+    "socialism": "politics",
 
     "dog": "animals",
     "pet": "animals",
-   // "pet": "animals",
-    "cat": "animals"
-
-
-
+    "fish": "animals",
+    "baby": "animals",
+    "petting": "animals",
+    "meow": "animals",
+    "bark": "animals",
+    "cat": "animals",
+    "housepet": "animals",
+    "bird": "animals",
+    "horse": "animals",
+    "duck": "animals",
+    "wolf": "animals",
+    "turtle": "animals",
+    "frog": "animals",
+    "animal": "animals"
 }
 
 var index = 0; //this will keep track as to where we are on the loop
@@ -73,7 +124,7 @@ T.get('search/tweets', {q: key, count:100}, async function(error,data,response){
             await classifier.learn(cleaned_up_words, value);//value);
         }
         index++;
-        if(index ==38){//number of values u have on the object (eg.bts, mcgregor, etc)
+        if(index ==92){//number of values u have on the object (eg.bts, mcgregor, etc)
             
             var try_it = "he won the game";
             try_it.split(" ").join(", ");

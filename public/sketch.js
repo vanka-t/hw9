@@ -3,12 +3,12 @@ var chatInput;
 var chatButton;
 var machineText;
 var showText = " ";
-var foodResponses = ["i love me some good food!", "oh you are talking to the biggest foodie voicebox around here!"];
-var politicsResponses = ["politics these days just make me wanna shut down for a good while", "that quarantine weight "];
-var musicResponses= ["well i wouldn't know, my taste in music is just embarrassing", "music these days is just not my taste", "you lost me at the popculture reference!lol"];
-var natureResponses= ["mother nature ", "that quarantine weight "];
-var movieResponses= ["i am not the biggest movie fanatic, but a Netflix episode before bed is always a must for me!"];
-var animalResponses= ["i am not the biggest movie fanatic, but a Netflix episode before bed is always a must for me!"];
+var foodResponses = ["i love me some good food!", "oh you are talking to the biggest foodie voicebox around here!", "oh man, i'm getting hungry just thinking about it!"];
+var politicsResponses = ["politics these days just make me wanna shut down for a good while", "theres nothing worse than politics trending on twitter"];
+var musicResponses= ["i wish i was born in a generation with better music","well i wouldn't know, my taste in music is just embarrassing", "music these days is just not my taste", "you lost me at the popculture reference!lol"];
+var natureResponses= ["may be a robot, but i still appreciate good old mother nature!", "nature truly is amazing huh!", "man, i miss going outside and appreciating nature now!"];
+var movieResponses= ["i am not the biggest movie fanatic, but a Netflix episode before bed is; always a must for me!", "i'm more of an indie film enthusiast", "movies watched from my screen are never boring!"];
+var animalResponses= ["i really wanna own a pet too!", "animals are too cute!", "if i wasn't allergic, i would own all the dogs in the world!"];
 
 var socket = io.connect("http://localhost:3000");
 var mainX;
@@ -25,14 +25,14 @@ function setup() {
   createCanvas(1200, 900);
   mainX = width/2;
   //input
-  chatInput = createInput("Chat with me bb!");
-  chatInput.position(820,520);
-  chatInput.size(200,40);
+  chatInput = createInput("type in your hot take!");
+  chatInput.position(820,630);
+  chatInput.size(200,30);
 
   //button
-  chatButton = createButton("Chat with me");
+  chatButton = createButton("Send");
   var col = color(150,100,100);
-  chatButton.position(mainX,400);
+  chatButton.position(860,980);
   chatButton.size(150,20);
   var fontSize = 50;
   //chatButton.style("font-size",fontSize + "px");
@@ -44,6 +44,8 @@ function setup() {
 
   
   socket.on("guess",makeaGuess);
+
+  
 }
 
 
